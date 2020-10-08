@@ -1,5 +1,5 @@
 /*
- *    mymodule.c - Simple example Loadable Kernel Module that prints
+ *    hello.c - Simple example Loadable Kernel Module that prints
  *              output to the syslog
  *
  *    
@@ -20,16 +20,16 @@
 #include <linux/init.h>		// included for __init and __exit macros
 
 
-static int __init mymodule_init(void)
+static int __init hello_init(void)
 {
-    printk(KERN_INFO "Loading the MyAssign-4 module.\n");
+    printk(KERN_INFO "Loading the hello module.\n");
     return 0;	// Non-zero return means that the module couldn't be loaded.
 }
 
-static void __exit mymodule_cleanup(void)
+static void __exit hello_cleanup(void)
 {
-    printk(KERN_INFO "Unloading the MyAssign-4 module.\n");
+    printk(KERN_INFO "Unloading the hello module.\n");
 }
 
-module_init(mymodule_init);
-module_exit(mymodule_cleanup);
+module_init(hello_init);
+module_exit(hello_cleanup);
