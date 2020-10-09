@@ -22,13 +22,13 @@
 
 static int __init hello_init(void)
 {
-    printk(KERN_INFO "Loading the hello module.\n");
+    printk(KERN_INFO "Loading module by Nidhi Patel.\n");
     return 0;	// Non-zero return means that the module couldn't be loaded.
 }
 
 static void __exit hello_cleanup(void)
 {
-    printk(KERN_INFO "Unloading the hello module.\n");
+    printk(KERN_INFO "Unloading module by Nidhi patel.\n");
 }
 
 module_init(hello_init);
